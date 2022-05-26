@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_x="20dp"
+        android:layout_y="60dp"
+        android:elevation="10dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/img_13"
+        app:cardCornerRadius="40dp">
+
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_x="45dp"
+                android:layout_y="108dp"
+                android:text="Veggie tomato mix"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_x="70dp"
+                android:layout_y="219dp"
+                android:text="N1,900"
+                android:textColor="@color/main"
+                android:textSize="17sp" />
+        </AbsoluteLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:elevation="1dp"
+        android:layout_height="wrap_content"
+        android:layout_x="55dp"
+        android:layout_y="10dp"
+        app:cardCornerRadius="150dp">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/img_14" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</AbsoluteLayout>

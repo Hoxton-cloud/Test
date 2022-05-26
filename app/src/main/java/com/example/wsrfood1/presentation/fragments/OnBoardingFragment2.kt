@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.wsrfood1.R
+import com.example.wsrfood1.databinding.FragmentOnBoarding2Binding
+import com.example.wsrfood1.presentation.ui.login.SignInActivity
+import com.example.wsrfood1.presentation.ui.login.SignUpActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +24,8 @@ class OnBoardingFragment2 : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var _binding: FragmentOnBoarding2Binding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,14 +33,25 @@ class OnBoardingFragment2 : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_on_boarding2, container, false)
+        _binding = FragmentOnBoarding2Binding.inflate(inflater, container, false)
+        val root: View = binding.root
+
+        binding.button1.setOnClickListener {
+            SignInActivity.startForResult(requireContext())
+        }
+
+        binding.button2.setOnClickListener {
+            SignUpActivity.startForResult(requireContext())
+        }
+
+        return _binding?.root
     }
 
     companion object {

@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WSRFood1">
         <activity
+            android:name=".presentation.ui.login.SignInActivity"
+            android:exported="false"
+            android:label="@string/title_activity_sign_up" />
+        <activity
+            android:name=".presentation.ui.login.SignUpActivity"
+            android:exported="false"
+            android:label="@string/title_activity_sign_in" />
+        <activity
             android:name=".presentation.MainScreenActivity"
             android:exported="false"
             android:label="@string/title_activity_main_screen" />
